@@ -7,12 +7,14 @@
 <style type="text/css">
 html{height:100%;font-size:2em;}
 body{height:100%;overflow:hidden;padding:0;margin:0;position:relative;display:flex;justify-content:center;align-items:center;}
+dl{word-break:break-all;padding:1rem;overflow-y:auto;max-height:100%;box-sizing:border-box;}
 </style>
 <script>
 function S(p){const s={};for(let k of p.keys()){s[k]=p.get(k);}return s;}
 function E(t,v){const e=document.createElement(t);e.textContent=v;return e;}
 function D(l,k,v){l.appendChild(E('dt',k));l.appendChild(E('dd',v));}
-window.addEventListener('DOMContentLoaded',(event)=>{const p=S(new URLSearchParams(location.search));const l=document.getElementById('list');Object.keys(p).forEach((k)=>{D(l,k,p[k]);});});</script>
+window.addEventListener('DOMContentLoaded',(event)=>{const p=S(new URLSearchParams(location.search));const l=document.getElementById('list');Object.keys(p).forEach((k)=>{D(l,k,p[k]);});});
+</script>
 </head>
 <body>
     <dl id='list'></dl>
